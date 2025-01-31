@@ -1,0 +1,143 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Light Mode */
+.light-mode {
+  --primary: #fc9b5f;
+  --secondary: #383147;
+  background: linear-gradient(80deg, var(--primary), var(--secondary));;
+  --accent: #ffd000;
+  background-color: var(--background);
+  color: #333;
+}
+
+
+
+.light-mode .custom-brand {
+  color: var(--primary);
+}
+
+.light-mode .custom-nav-link {
+  color: #fff;
+}
+
+.light-mode .toggle-button {
+  background: var(--accent);
+}
+
+/* Dark Mode */
+.dark-mode {
+  --primary: #1A1D23;
+  --secondary: #07032480;
+  --background: #000000;
+  --accent: #011922;
+  background-color: var(--background);
+  color: #fff;
+}
+
+
+.dark-mode .custom-brand {
+  color: var(--accent);
+}
+
+.dark-mode .custom-nav-link {
+  color: #fff;
+}
+
+.dark-mode .toggle-button {
+  background: var(--accent);
+}
+
+/* Navbar */
+.custom-navbar {
+  display: flex; /* Use 'flex' instead of 'flexbox' */
+  justify-content: space-between;
+  align-items: center; /* Corrected from 'align-items: j;' */
+  backdrop-filter: blur(15px);
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 4px 12px rgba(255, 254, 254, 0.952);
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  border-radius: 0 0 15px 15px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-navbar .custom-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  flex-grow: 1; /* Allows the brand to take up available space */
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-right: auto; /* Moves brand to the left */
+}
+
+.custom-navbar .nav-buttons {
+  display: flex;
+  gap: 100px; /* Adjusts spacing between buttons */
+}
+
+.custom-navbar .custom-nav-link {
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: dashed;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .custom-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.custom-navbar .toggle-button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(1.9deg, var(--primary), var(--secondary));
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .toggle-button:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.title{
+  color:floralwhite;
+  font-size: 1.4rem;
+  font-weight: 1000;
+
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: left;
+  flex-grow: 30; /* Allows the brand to take up available space */
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-right: 1000px; /* Moves brand to the left */
+}
